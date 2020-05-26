@@ -22,44 +22,44 @@ values
 
 - 3 select * from person order by height desc;
 
--select * from person order by height asc;
+- 4 select * from person order by height asc;
 
-select * from person order by age desc;
+- 5 select * from person order by age desc;
 
-select * from person
+- 6 select * from person
 where age > 20;
 
-select * from person
+- 7 select * from person
 where age = 18;
 
-select * from person
+- 8 select * from person
 where age < 20
 or age > 30;
 
-select * from person
+- 9 select * from person
 where age != 27;
 
-select * from person
+- 10 select * from person
 where favorite_color != 'Red';
 
-select * from person
+- 11 select * from person
 where favorite_color != 'Red'
 and favorite_color != 'Blue';
 
-select * from person
+- 12 select * from person
 where favorite_color = 'Orange'
 or favorite_color = 'Green';
 
-select * from person
+- 13 select * from person
 where favorite_color in ('Orange', 'Green', 'Blue');
 
-select * from person
+- 14 select * from person
 where favorite_color in ('Purple', 'Yellow');
 
 
 ## Table
 
-create table orders (
+- 1 create table orders (
 order_id serial primary key,
   person_id int,
   product_name varchar(50),
@@ -67,78 +67,78 @@ order_id serial primary key,
   quantity int
 );
 
-insert into orders (person_id, product_name, product_price, quantity)
+- 2 insert into orders (person_id, product_name, product_price, quantity)
 values
 (1, 'basketball', 15.23, 3),
 (2, 'toothpaste', 5.26, 2);
 
-select * from orders;
+- 3 select * from orders;
 
-select sum(quantity) from orders;
+- 4 select sum(quantity) from orders;
 
-select sum(quantity * product_price) from orders;
+- 5 select sum(quantity * product_price) from orders;
 
-select sum(quantity * product_price) from orders
+- 6 select sum(quantity * product_price) from orders
 where person_id = 1
 
 
 ## Artist
 
-insert into artist (name)
+- 1 insert into artist (name)
 values
 ('Bob Ross'),
 ('Vangauh'),
 ('Picasso');
 
-select * from artist order by name desc limit 10;
+- 2 select * from artist order by name desc limit 10;
 
-select * from artist order by name asc limit 5;
+- 3 select * from artist order by name asc limit 5;
 
-select * from artist
+- 4 select * from artist
 where name like ('Black%');
 
-select * from artist
+- 5 select * from artist
 where name like ('%Black%');
 
 
 ## Employee
 
-select (first_name, last_name) from employee
+- 1 select (first_name, last_name) from employee
 where city = 'Calgary';
 
-select birth_date from employee
+- 2 select birth_date from employee
 order by birth_date desc limit 1;
 
-select birth_date from employee
+- 3 select birth_date from employee
 order by birth_date asc limit 1;
 
-select * from employee
+- 4 select * from employee
 where reports_to = 2;
 
-select count(*) from employee
+- 5 select count(*) from employee
 where city = 'Lethbridge';
 
 
 ## Invoice
 
-select count(*) from invoice
+- 1 select count(*) from invoice
 where billing_country = 'USA';
 
-select total from invoice
+- 2 select total from invoice
 order by total desc limit 1;
 
-select total from invoice
+- 3 select total from invoice
 order by total asc limit 1;
 
-select * from invoice
+- 4 select * from invoice
 where total > 5;
 
-select * from invoice
+- 5 select * from invoice
 where total < 5;
 
-select count(*) from invoice
+- 6 select count(*) from invoice
 where billing_state in ('CA', 'TX', 'AZ');
 
-select avg(total) from invoice;
+- 7 select avg(total) from invoice;
 
-select sum(total) from invoice;
+- 8 select sum(total) from invoice;
