@@ -2,7 +2,7 @@
 
 ## Person
 
-create table person (
+- 1 create table person (
 person_id serial primary key,
   name varchar(30),
   age int,
@@ -11,7 +11,7 @@ person_id serial primary key,
   favorite_color varchar(15)
 );
 
-insert into person
+- 2 insert into person
 (name, age, height, city, favorite_color)
 values
 ('Ben', 23, 178, 'Chico', 'Blue'),
@@ -20,9 +20,9 @@ values
 ('Andrew', 22, 167, 'Redding', 'Red'),
 ('Josh', 30, 180, 'Orem', 'Blue');
 
-select * from person order by height desc;
+- 3 select * from person order by height desc;
 
-select * from person order by height asc;
+-select * from person order by height asc;
 
 select * from person order by age desc;
 
