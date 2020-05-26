@@ -3,7 +3,7 @@
 ## Person
 
 ### 1
-- create table person (
+ create table person (
 person_id serial primary key,
   name varchar(30),
   age int,
